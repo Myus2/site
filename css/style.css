@@ -197,7 +197,96 @@
   .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
   
   
+  * {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body.menuItems {
+    background: #131416;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    }
   
+  .box{
+    display:flex;
+    margin: 5%;
+    align-items: center;
+    position: absolute;
+  }
   
+  #checkbox {
+    width: 65px; 
+    height: 65px;
+    appearance: none;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+  }
+  
+  #checkbox:hover, .menu .menuItems:hover {
+    background: rgba(255, 255, 255, .7);
+  }
+  
+  #checkbox::before {
+    content: '\f1e0';
+    font-family: 'font awesome 5 free';
+    font-weight: 700; 
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(41,41,41);
+    transition:all 1.5s;
+  }
+  
+  #checkbox:checked::before {
+    content: '\f00d';
+  }
+  
+  #checkbox:checked ~ .menu {
+    width:264px;
+  }
+  
+  .menu {
+    width: 0px;
+    overflow: hidden;
+    display: flex;
+    transition: all .5s;
+  }
+  .menu .menuItems {
+    width: 65px;
+    height: 65px;
+    background: white;
+    border-left: 1px solid rgb(165,165,165);
+      display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .menu .menuItems i {
+    font-size: 1.8rem;
+  }
+  
+  .fa-twitch {
+    color:#9400D3;
+  }
+  
+  .fa-instagram {
+    color:#B22222
+  }
+  
+  .fa-youtube {
+    color:#FF0000
+  }
+  
+  .fa-tiktok {
+    color:#00FFFF;
+  }
+
   
   
